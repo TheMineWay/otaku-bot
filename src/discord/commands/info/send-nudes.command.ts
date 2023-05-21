@@ -1,6 +1,6 @@
 import { Command, Handler } from '@discord-nestjs/core';
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '../../../services/config/config.service';
+import { ConfigService } from '../../../server/config/config.service';
 
 @Command({
   name: 'sendnudes',

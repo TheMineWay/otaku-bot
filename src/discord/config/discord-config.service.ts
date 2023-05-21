@@ -3,7 +3,7 @@ import {
   DiscordModuleOption,
   DiscordOptionsFactory,
 } from '@discord-nestjs/core';
-import { ConfigService } from '../../services/config/config.service';
+import { ConfigService } from '../../server/config/config.service';
 import { GatewayIntentBits } from 'discord.js';
 
 @Injectable()
