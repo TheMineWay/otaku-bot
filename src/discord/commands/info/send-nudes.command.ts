@@ -14,6 +14,6 @@ export class SendNudesCommand {
   onPlaylist(): string {
     return `You can see here my insides here ${
       this.configService.getEnv().REPOSITORY_URL
-    }`;
+    } UwU`;
   }
 }
