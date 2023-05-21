@@ -18,5 +18,5 @@ COPY . .
 RUN npm run build
 
 # MIGHT CHANGE DEPENDING ON .ENV CONFIG
-EXPOSE 4000
+EXPOSE 3000
 CMD [ "node", "dist/main.js" ]
