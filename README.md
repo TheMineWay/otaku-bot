@@ -3,6 +3,8 @@
 
 An Open Source Discord bot developed to ease otaku's community life.
 
+[![CodeQL](https://github.com/TheMineWay/otaku-bot/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/TheMineWay/otaku-bot/actions/workflows/github-code-scanning/codeql)
+
 ## **Features**
 
 Check the bot development status and programmed features.
