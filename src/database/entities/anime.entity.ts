@@ -18,6 +18,9 @@ export interface AnimeAttributes extends ITimestamps {
   animeId: string;
   name: string;
   coverUrl: string;
+  trailerUrl: string | null;
+  score: number;
+  ranked: number | null;
   indexedAt: Date;
 }
 export interface AnimeCreateAttributes
@@ -52,6 +55,18 @@ export class Anime
   @AllowNull(false)
   @Column(DataType.STRING(512))
   coverUrl: string;
+
+  @AllowNull(true)
+  @Column(DataType.STRING(512))
+  trailerUrl: string | null;
+
+  @AllowNull(false)
+  @Column(DataType.DECIMAL({ precision: 4, scale: 2 }))
+  score: number;
+
+  @AllowNull(true)
+  @Column(DataType.INTEGER)
+  ranked: number | null;
 
   @AllowNull(false)
   @Column(DataType.DATE)
