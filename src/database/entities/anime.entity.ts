@@ -32,7 +32,7 @@ export interface AnimeUpdateAttributes extends Partial<AnimeCreateAttributes> {}
     },
   ],
 })
-export class AnimeEntity
+export class Anime
   extends Model<AnimeAttributes, AnimeCreateAttributes>
   implements OmitTimestamps<AnimeAttributes>
 {

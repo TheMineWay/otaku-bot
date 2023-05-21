@@ -1,3 +1,3 @@
-import { AnimeEntity } from './entities/anime.entity';
+import { Anime } from './entities/anime.entity';
 
-export const databaseEntities = [AnimeEntity];
+export const databaseEntities = [Anime];
