@@ -1,0 +1,16 @@
+version: '3'
+name: otaku-bot-dev
+services:
+  api:
+    container_name: otaku-bot-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./src:/app/src
+    expose:
+      - '4000'
