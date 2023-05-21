@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { ApiModule } from './api/api.module';
 import { DiscordModule } from '../discord/discord.module';
 import { ConfigModule } from './config/config.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [ApiModule, DiscordModule, ConfigModule],
+  imports: [DatabaseModule, ApiModule, DiscordModule, ConfigModule],
   controllers: [AppController],
   providers: [AppService],
 })
