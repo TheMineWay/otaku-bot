@@ -1,3 +1,4 @@
+
 # **Otaku BOT**
 
 An Open Source Discord bot developed to ease otaku's community life.
@@ -46,3 +47,7 @@ From now on you can start the bot by running the `otaku-bot` **Docker** containe
 ## **Repository**
 
 Check out the official GitHub repository: <https://github.com/TheMineWay/otaku-bot>
+
+## **Backed by**
+
+![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
