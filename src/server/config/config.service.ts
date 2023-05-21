@@ -7,7 +7,11 @@ export class ConfigService {
 
   constructor() {
     const env = process.env as Env;
-    this.env = env;
+    this.env = {
+      ...env,
+      REPOSITORY_URL:
+        env.REPOSITORY_URL ?? 'https://github.com/TheMineWay/otaku-bot',
+    };
   }
 
   public getEnv = () => ({ ...this.env } as EnvModel);
@@ -15,7 +19,5 @@ export class ConfigService {
 
 class EnvModel {
   DISCORD_TOKEN: string;
-  APP_ID: string;
-  PUBLIC_KEY: string;
   REPOSITORY_URL: string;
 }
