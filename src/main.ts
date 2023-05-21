@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 const fs = require('fs');
 const path = require('path');
@@ -12,6 +13,16 @@ async function bootstrap() {
   };
 
   const app = await NestFactory.create(AppModule, { httpsOptions });
+
+  const config = new DocumentBuilder()
+    .setTitle('🤖 Otaku BOT')
+    .setDescription('The Otaku BOT API description')
+    .setVersion('1.0')
+    .addTag('Otaku BOT')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+
   await app.listen(3000);
 }
 bootstrap();
