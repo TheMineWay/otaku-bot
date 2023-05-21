@@ -18,6 +18,10 @@ export const databaseProviders = [
           min: 2,
           max: 5,
         },
+        sync: {
+          alter: true,
+          force: false,
+        },
       });
       sequelize.addModels(databaseEntities);
       await sequelize.sync();
