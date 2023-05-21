@@ -1,3 +1,5 @@
+export type EnvBoolean = 'no' | 'yes' | 'true' | 'false';
+
 export type Env = {
   DISCORD_TOKEN: string;
 
@@ -6,6 +8,9 @@ export type Env = {
   DATABASE_PASSWORD: string;
   DATABASE_HOST: string;
   DATABASE_PORT?: string;
+  ENABLE_DATABASE_LOGGING?: EnvBoolean;
+
+  ENABLE_SWAGGER?: EnvBoolean;
 
   REPOSITORY_URL?: string;
 };

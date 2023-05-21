@@ -22,6 +22,7 @@ export const databaseProviders = [
           alter: true,
           force: false,
         },
+        logging: env.ENABLE_DATABASE_LOGGING ? console.log : undefined,
       });
       sequelize.addModels(databaseEntities);
       await sequelize.sync();
