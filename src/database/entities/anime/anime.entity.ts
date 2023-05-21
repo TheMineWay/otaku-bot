@@ -7,10 +7,10 @@ import {
   PrimaryKey,
   Table,
 } from 'sequelize-typescript';
-import { OmitIdAndTimestamps } from '../../types/database/omit-id-and-timestamps.type';
-import { OmitTimestamps } from '../../types/database/omit-timestamps.type';
-import { ITimestamps } from '../../types/database/timestamps.interface';
-import { uuid } from '../../types/generic/uuid';
+import { OmitIdAndTimestamps } from '../../../types/database/omit-id-and-timestamps.type';
+import { OmitTimestamps } from '../../../types/database/omit-timestamps.type';
+import { ITimestamps } from '../../../types/database/timestamps.interface';
+import { uuid } from '../../../types/generic/uuid';
 
 export interface AnimeAttributes extends ITimestamps {
   id: uuid;
