@@ -21,6 +21,7 @@ export class ConfigService {
     const env = process.env as Env;
     this.env = {
       ...env,
+      HTTPS: evaluateEnvBoolean(env.HTTPS, false),
       REPOSITORY_URL: env.REPOSITORY_URL ?? DEFAULT_REPOSITORY_URL,
       DATABASE_PORT: env.DATABASE_PORT
         ? +env.DATABASE_PORT
@@ -37,6 +38,8 @@ export class ConfigService {
 }
 
 class EnvModel {
+  HTTPS: boolean;
+
   DISCORD_TOKEN: string;
 
   DATABASE_NAME: string;

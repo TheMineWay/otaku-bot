@@ -11,7 +11,7 @@ export class SendNudesCommand {
   constructor(private readonly configService: ConfigService) {}
 
   @Handler()
-  onPlaylist(): string {
+  onCommand(): string {
     return `You can see here my insides here ${
       this.configService.getEnv().REPOSITORY_URL
     } UwU`;

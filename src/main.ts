@@ -10,10 +10,12 @@ async function bootstrap() {
   const env = new ConfigService().getEnv();
 
   // HTTPS options
-  const httpsOptions = {
-    key: fs.readFileSync(path.join(__dirname, '../certificates/key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, '../certificates/cert.pem')),
-  };
+  const httpsOptions = env.HTTPS
+    ? {
+        key: fs.readFileSync(path.join(__dirname, '../certificates/key.pem')),
+        cert: fs.readFileSync(path.join(__dirname, '../certificates/cert.pem')),
+      }
+    : {};
 
   const app = await NestFactory.create(AppModule, { httpsOptions });
 

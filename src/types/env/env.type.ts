@@ -1,6 +1,8 @@
 export type EnvBoolean = 'no' | 'yes' | 'true' | 'false';
 
 export type Env = {
+  HTTPS: EnvBoolean;
+
   DISCORD_TOKEN: string;
 
   DATABASE_NAME: string;
