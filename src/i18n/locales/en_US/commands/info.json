@@ -1,0 +1,5 @@
+{
+    "version": {
+        "Response": "My current version is {{version}}"
+    }
+}
