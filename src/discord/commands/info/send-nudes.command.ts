@@ -1,6 +1,8 @@
 import { Command, Handler } from '@discord-nestjs/core';
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '../../../server/config/config.service';
+import { I18N_SERVICE } from '../../../i18n/i18n.module';
+import { I18nService } from '../../../i18n/i18n.service';
 
 @Command({
   name: 'sendnudes',
@@ -8,12 +10,15 @@ import { ConfigService } from '../../../server/config/config.service';
 })
 @Injectable()
 export class SendNudesCommand {
-  constructor(private readonly configService: ConfigService) {}
+  constructor(
+    private readonly configService: ConfigService,
+    @Inject(I18N_SERVICE) private readonly i18nService: I18nService,
+  ) {}
 
   @Handler()
   onCommand(): string {
-    return `You can see here my insides here ${
-      this.configService.getEnv().REPOSITORY_URL
-    } UwU`;
+    return this.i18nService.translate('commands.info.send-nudes.Response', {
+      url: this.configService.getEnv().REPOSITORY_URL,
+    });
   }
 }
