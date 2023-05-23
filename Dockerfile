@@ -19,4 +19,4 @@ RUN npm run build
 
 # MIGHT CHANGE DEPENDING ON .ENV CONFIG
 EXPOSE 3000
-CMD [ "node", "dist/main.js" ]
+CMD [ "node", "dist/src/main.js" ]

@@ -1,0 +1,8 @@
+{
+    "version": {
+        "Response": "My current version is {{version}}"
+    },
+    "send-nudes": {
+        "Response": "You can see here my insides here {{- url}} UwU"
+    }
+}
