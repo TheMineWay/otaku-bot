@@ -1,10 +1,9 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { TFunction } from 'i18next';
 import * as i18next from 'i18next';
 
 import * as en_US_commands_info from './locales/en_US/commands/info.json';
 
-@Injectable()
 export class I18nService {
   private constructor(
     private readonly t: TFunction<'translation', undefined, 'translation'>,

@@ -2,6 +2,7 @@ import { Command, Handler } from '@discord-nestjs/core';
 import { Inject, Injectable } from '@nestjs/common';
 import { getPackageJson } from '../../../utils/package/get-package-json.util';
 import { I18nService } from '../../../i18n/i18n.service';
+import { I18N_SERVICE } from '../../../i18n/i18n.module';
 
 @Command({
   name: 'version',
@@ -9,7 +10,7 @@ import { I18nService } from '../../../i18n/i18n.service';
 })
 @Injectable()
 export class VersionCommand {
-  constructor(@Inject('I18N_SERVICE') private i18nService: I18nService) {}
+  constructor(@Inject(I18N_SERVICE) private i18nService: I18nService) {}
 
   @Handler()
   onCommand(): string {
