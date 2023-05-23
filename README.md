@@ -21,7 +21,7 @@ Check the bot development status and programmed features.
 
 Create a file named `.env` on the project's root folder. Then, copy the contents of the `example.env` file on the `.env` file.
 
-Now, go to the [**Discord developer portal**](https://discord.com/developers/applications) and create a new application for the bot (or select an existing one).
+Now, go to the [Discord developer portal](https://discord.com/developers/applications) and create a new application for the bot (or select an existing one).
 Open the **Bot** tab and click on *Reset Token*, then copy the generated token onto the `.env` file.
 
 The `.env` file should look like this:
@@ -45,6 +45,10 @@ docker compose up
 Now you will see some green lines on the terminal. If you see `Bot <YOUR BOT NAME> was started!` it means the bot is up and running.
 
 From now on you can start the bot by running the `otaku-bot` **Docker** container (if you repeat this steps again on the same computer, a new Bot instance will be created).
+
+## **I18n project**
+
+You can contribute to the bot development providing new translations to the bot's [Crowdin project](https://crowdin.com/project/otaku-bot).
 
 ## **Repository**
 
