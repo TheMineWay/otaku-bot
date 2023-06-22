@@ -27,7 +27,7 @@
     "@nestjs/platform-express": "^9.4.3",
     "@nestjs/swagger": "^7.0.3",
     "discord.js": "^14.11.0",
-    "i18next": "^23.2.0",
+    "i18next": "^23.2.3",
     "mysql2": "^3.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
